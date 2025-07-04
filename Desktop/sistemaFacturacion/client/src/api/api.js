@@ -2,7 +2,7 @@
 import Axios from 'axios';
 
 const api = Axios.create({
-  baseURL: 'http://localhost:3001/api', // Esta será la URL base para todas tus solicitudes protegidas.
+  baseURL: 'https://sistema-facturacion-backend.onrender.com/api', // Esta será la URL base para todas tus solicitudes protegidas.
                                       // No incluyas el '/api' en tus llamadas individuales.
   headers: {
     'Content-Type': 'application/json',
