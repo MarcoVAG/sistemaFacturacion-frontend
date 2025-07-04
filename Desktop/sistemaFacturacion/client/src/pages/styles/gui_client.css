@@ -1,0 +1,80 @@
+/* Estilos generales */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  #btnsMedio{
+    margin-left: 638px;
+  }
+
+  /* Estilos para pantallas de móviles */
+  @media (max-width: 768px) {
+    .card-header, .card-footer {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    #btnsMedio{
+        margin-left: 0px;
+      }
+  
+    .input-group-text {
+      font-size: 1rem;
+    }
+  
+    .input-group input, 
+    .input-group select {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    /* Alinear los botones para que ocupen toda la pantalla en móviles */
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+  
+    /* Tabla responsiva */
+    table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tbody tr {
+      display: block;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+  
+    tbody td {
+      display: block;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }  

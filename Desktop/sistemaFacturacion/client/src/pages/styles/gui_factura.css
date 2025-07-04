@@ -1,0 +1,100 @@
+/* Estilos generales */
+html, body {
+  height: 100%; /* Asegúrate de que el html y el body ocupen el 100% de la altura */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.container {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+.card {
+  width: 100%;
+  max-width: 900px; /* Aumentar el ancho máximo de la tarjeta */
+  margin: 0 auto; /* Centra el card horizontalmente */
+  border: 1px solid #ddd; /* Añadir borde para mejor separación */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.card-header {
+  background-color: #007bff; /* Color de fondo del encabezado */
+  color: white; /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de fuente del encabezado */
+}
+
+.card-body {
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Ajustes para formularios y tablas */
+.input-group {
+  margin-bottom: 15px; /* Espacio entre grupos de entrada */
+}
+
+.table {
+  width: 100%; /* Ocupa todo el ancho */
+  margin-top: 20px; /* Espacio superior */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Tarjeta ocupa el 100% en pantallas pequeñas */
+    margin: 0 10px; /* Agregar un margen lateral */
+  }
+
+  .card-header {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para entradas */
+    padding: 10px; /* Espaciado interno ajustado */
+  }
+
+  .btn {
+    width: 100%; /* Botones ocupan todo el ancho */
+    margin-bottom: 10px; /* Espacio inferior entre botones */
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+  }
+
+  /* Ajustes para tablas en móviles */
+  table {
+    width: 100%;
+    overflow-x: auto; /* Desplazamiento horizontal para tablas */
+    display: block; /* Permitir el desplazamiento */
+  }
+
+  thead {
+    display: none; /* Ocultar encabezados de tabla en móviles */
+  }
+
+  tbody tr {
+    display: block; /* Cada fila ocupa toda la fila */
+    border-bottom: 1px solid #ddd; /* Separación entre filas */
+    margin-bottom: 10px; /* Espacio entre filas */
+  }
+
+  tbody td {
+    display: block; /* Cada celda ocupa toda la fila */
+    text-align: right; /* Alinear texto a la derecha */
+    padding-left: 50%; /* Espaciado interno */
+    position: relative; /* Para el contenido antes */
+  }
+
+  tbody td::before {
+    content: attr(data-label); /* Contenido para etiquetas de celdas */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alinear a la izquierda */
+    width: 50%; /* Ancho del contenido */
+    padding-left: 15px; /* Espacio a la izquierda */
+    font-weight: bold; /* Negrita */
+    text-align: left; /* Alinear texto a la izquierda */
+  }
+}

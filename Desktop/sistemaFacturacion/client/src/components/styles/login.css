@@ -1,0 +1,64 @@
+body {
+    background-image: url('../../images/R.jpg'); /* Cambia esto a la ruta de tu imagen */
+    background-size: auto; /* Cubrir todo el fondo */
+    background-position: center; /* Centrar la imagen */
+    height: 100vh; /* Altura completa de la ventana */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Necesario para el efecto de desenfoque */
+}
+
+
+.login-card {
+    border-radius: 15px; /* Bordes redondeados */
+    max-width: 400px; /* Ancho máximo para la tarjeta */
+    margin: auto; /* Centrar la tarjeta */
+    transition: transform 0.3s; /* Animación suave al pasar el ratón */
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 1; /* Asegúrate de que esté por encima del fondo */
+}
+
+
+.login-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.alert {
+    margin-top: 10px; /* Espacio superior para la alerta */
+}
+
+input {
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input:focus {
+    border-color: #007bff; /* Color de borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra alrededor del input */
+}
+
+.text-primary {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+}
+
+.text-primary:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+/*
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(18px);
+    z-index: 0;
+}*/

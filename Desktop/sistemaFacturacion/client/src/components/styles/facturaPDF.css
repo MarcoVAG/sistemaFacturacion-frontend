@@ -1,0 +1,76 @@
+/* src/styles/facturaPDF.css o un archivo CSS global */
+
+/* Estilos para el modo blanco y negro */
+.black-and-white-mode {
+    /* Asegura que el fondo sea blanco y el texto negro por defecto */
+    background-color: #fff !important;
+    color: #000 !important;
+
+    /* Elimina sombras o bordes de color si los hubiera */
+    box-shadow: none !important;
+    border-color: #ccc !important; /* Bordes grises */
+
+    /* Generaliza colores de texto y fondo para todos los elementos dentro */
+    * {
+        color: #000 !important; /* Fuerza el texto a negro */
+        background-color: transparent !important; /* Elimina fondos de color */
+        border-color: #ccc !important; /* Bordes grises */
+        box-shadow: none !important;
+    }
+
+    /* Sobrescribe colores específicos de Bootstrap si es necesario */
+    .text-primary,
+    .text-info,
+    .text-success,
+    .text-danger {
+        color: #000 !important; /* Fuerza colores de texto a negro */
+    }
+
+    .bg-primary,
+    .bg-info,
+    .bg-success,
+    .bg-danger,
+    .bg-secondary {
+        background-color: #fff !important; /* Fuerza fondos de color a blanco */
+    }
+
+    /* Estilos específicos para badges en B/N */
+    .badge.border.border-dark.text-dark.bg-white {
+        background-color: #fff !important;
+        color: #000 !important;
+        border-color: #000 !important;
+    }
+
+    /* Estilos para tablas */
+    .table-striped > tbody > tr:nth-of-type(odd) > * {
+        background-color: #f8f9fa !important; /* Un gris muy claro para filas impares */
+    }
+    .table-bordered th, .table-bordered td {
+        border-color: #dee2e6 !important; /* Bordes de tabla más claros */
+    }
+    .table-hover tbody tr:hover > * {
+        background-color: #e2e6ea !important; /* Hover gris claro */
+    }
+    .table-primary { /* Para la fila del total */
+        background-color: #e9ecef !important; /* Un gris un poco más oscuro */
+        color: #000 !important;
+    }
+}
+
+/* Puedes dejar tus estilos de color normales aquí para .color-mode */
+/* Por ejemplo, si tenías estilos específicos para .text-primary que no son de Bootstrap */
+.color-mode .text-primary {
+    color: #007bff; /* Azul de Bootstrap */
+}
+.color-mode .text-info {
+    color: #17a2b8; /* Cyan de Bootstrap */
+}
+.color-mode .bg-secondary {
+    background-color: #6c757d; /* Gris de Bootstrap */
+}
+.color-mode .bg-success {
+    background-color: #28a745; /* Verde de Bootstrap */
+}
+.color-mode .table-primary {
+    background-color: #cfe2ff; /* Azul claro de Bootstrap */
+}

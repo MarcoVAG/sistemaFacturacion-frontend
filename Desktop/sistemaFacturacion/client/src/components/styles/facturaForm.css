@@ -1,0 +1,33 @@
+.factura-form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group .form-control {
+    margin-top: 5px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-buttons .btn {
+    min-width: 100px;
+  }
+  
+  .d-flex.justify-content-between {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #007bff;
+  }  
