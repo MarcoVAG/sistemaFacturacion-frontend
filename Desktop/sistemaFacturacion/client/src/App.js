@@ -17,7 +17,6 @@ import FacturasRegistradas from "./pages/gui_facturas_registradas.js";
 import VentanaClientes from "./pages/emergentes/busquedaClientes.js";
 import VentanaProductos from "./pages/emergentes/busquedaProductos.js";
 import FacturaImpresion from "./components/facturas/facturaPDF.js";
-import VentanaFacturas from "./pages/emergentes/busquedaFacturas.js";
 import Gestion from './pages/gestion.js';
 import GuiErrores from './pages/gui_errores.js'; // *** NUEVO: Importa el componente de errores ***
 import PortalUsuario from './pages/portal_cliente.js'; // *** NUEVO: Importa el componente de errores ***
@@ -91,7 +90,6 @@ const App = () => {
 
                     {/* Rutas para componentes de ventanas emergentes/secundarias */}
                     <Route path="/facturaPDF" element={<FacturaImpresion />} />
-                    <Route path="/busquedaFacturas" element={<VentanaFacturas />} />
 
                     {/* Agrega más rutas aquí según sea necesario */}
                 </Route>
