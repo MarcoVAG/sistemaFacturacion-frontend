@@ -9,7 +9,6 @@ import {
   searchProducts,
   getAllProductsWithStock,
 } from "../../services/productService";
-import "./../styles/gui_producto.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ¡IMPORTANTE!
 
 const noti = withReactContent(Swal);

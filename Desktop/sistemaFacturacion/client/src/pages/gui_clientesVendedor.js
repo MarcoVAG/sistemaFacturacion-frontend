@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ClienteForm from "../components/clientes/clientForm.js";
-import "./../styles/gui_client.css"; // Asegúrate de que la ruta sea correcta si es gui_clientesVendedor.js
 
 import { useLoadDataCli } from "../hooks/clientes/useLoadDataCli";
 import { useOrderActionsCli } from "../hooks/clientes/useOrderActionsCli";
