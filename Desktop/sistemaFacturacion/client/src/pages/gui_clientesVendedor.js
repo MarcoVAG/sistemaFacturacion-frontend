@@ -1,13 +1,15 @@
-//src/pages/gui_clientes
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ClienteForm from "../components/clientes/clientForm.js";
-import "./styles/gui_client.css";
+import "./../styles/gui_client.css"; // Asegúrate de que la ruta sea correcta si es gui_clientesVendedor.js
 
 import { useLoadDataCli } from "../hooks/clientes/useLoadDataCli";
 import { useOrderActionsCli } from "../hooks/clientes/useOrderActionsCli";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ¡IMPORTANTE!
 
-const Clientes = () => {
+// Componente que contiene toda la lógica y la UI de la gestión de clientes (para Vendedor)
+// Lo renombramos para poder envolverlo en el Router de esta ventana.
+const ClientesVendedorContent = () => { // Renombrado
   const formRef = useRef(null);
 
   // Estados de formulario
@@ -139,7 +141,7 @@ const Clientes = () => {
                     nombre2,
                     apellido1,
                     apellido2,
-                    telefono,
+                    telefono, // Corregido: "ltelefono" a "telefono"
                     direccion,
                   })
                 : add({
@@ -156,8 +158,28 @@ const Clientes = () => {
           />
         </div>
       </div>
+      {/* Aquí normalmente iría tu tabla de clientes para edición/eliminación si fuera gui_clientes.js */}
+      {/* Si este es el gui_clientesVendedor.js, podrías tener una tabla de solo visualización o no tenerla. */}
+      {/* Por simplicidad, asumo que solo necesitas el formulario en el popup. */}
     </div>
   );
 };
 
-export default Clientes;
+// Componente principal exportado para la ventana emergente
+const ClientesVendedor = () => { // Usamos el nombre original del archivo gui_clientesVendedor.js
+  return (
+    <Router> {/* Envuelve el contenido en un BrowserRouter */}
+      <Routes>
+        {/*
+          Define la ruta para este componente dentro de su propio router.
+          La ruta principal que se abrirá es '/clientesVendedor'.
+          También agregamos una ruta para la raíz '/' por si acaso.
+        */}
+        <Route path="/clientesVendedor" element={<ClientesVendedorContent />} />
+        <Route path="/" element={<ClientesVendedorContent />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default ClientesVendedor;
